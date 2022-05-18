@@ -27,7 +27,6 @@ namespace ListClass
         public MainWindow()
         {
             InitializeComponent();
-            BtnPrint.IsEnabled = false;
             
             TxtSearch.IsEnabled = false;
             BtnAdd.IsEnabled = false;
@@ -158,7 +157,6 @@ namespace ListClass
                 {
                     string file = saveFileDialog.FileName;
                     ConnectHelper.SaveListToFile(file);
-                    BtnPrint.IsEnabled = true;
 
                     TxtSearch.IsEnabled = true;
                     BtnAdd.IsEnabled = true;
@@ -179,7 +177,6 @@ namespace ListClass
             {
                 ConnectHelper.filename = openFileDialog.FileName;
                 ConnectHelper.ReadListFromFile(ConnectHelper.filename);
-                BtnPrint.IsEnabled = true;
                 
                 TxtSearch.IsEnabled = true;
                 BtnAdd.IsEnabled = true;
