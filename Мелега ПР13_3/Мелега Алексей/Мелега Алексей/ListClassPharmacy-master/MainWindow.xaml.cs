@@ -31,7 +31,6 @@ namespace ListClass
             
             TxtSearch.IsEnabled = false;
             BtnAdd.IsEnabled = false;
-            BtnClear.IsEnabled = false;
             RbUp.IsEnabled = false;
             RbDown.IsEnabled = false;
             CmbFiltr.IsEnabled = false;
@@ -163,7 +162,6 @@ namespace ListClass
 
                     TxtSearch.IsEnabled = true;
                     BtnAdd.IsEnabled = true;
-                    BtnClear.IsEnabled = true;
                     RbUp.IsEnabled = true;
                     RbDown.IsEnabled = true;
                     CmbFiltr.IsEnabled = true;
@@ -185,7 +183,6 @@ namespace ListClass
                 
                 TxtSearch.IsEnabled = true;
                 BtnAdd.IsEnabled = true;
-                BtnClear.IsEnabled = true;
                 RbUp.IsEnabled = true;
                 RbDown.IsEnabled = true;
                 CmbFiltr.IsEnabled = true;

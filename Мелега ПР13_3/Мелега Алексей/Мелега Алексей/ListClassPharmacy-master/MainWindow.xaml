@@ -11,25 +11,27 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="3*"/>
         </Grid.ColumnDefinitions>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem.Icon>
+                    <Image Source="111.bmp"></Image>
+                </MenuItem.Icon>
+                <MenuItem Header="Сохранить файл" 
+                          Click="BtnSave_Click"></MenuItem>
+                <MenuItem Header="Открыть файл" 
+                          Click="BtnOpen_Click">
+                </MenuItem>
+                <Separator />
+            </MenuItem>
+            <MenuItem Header="Вид" >
+                <MenuItem Header="Очистить" 
+                          Click="BtnClear_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
         <StackPanel Grid.Column="0"
                     Orientation="Vertical"
-                    VerticalAlignment="Top">
-            <StackPanel
-                    Orientation="Horizontal"
-                    VerticalAlignment="Top">
-                <Button Name="BtnOpen"
-                    Click="BtnOpen_Click"
-                    Width="80"
-                    Height="30"
-                    Content="Открыть"
-                    Margin="5"/>
-                <Button Name="BtnSave"
-                    Click="BtnSave_Click"
-                    Width="90"
-                    Height="30"
-                    Content="Сохранить как"
-                    Margin="5"/>
-            </StackPanel>
+                    VerticalAlignment="Top"
+                    Margin="0 25 0 0">
             <Button Name="BtnPrint"
                     Width="130"
                     Height="30"
@@ -44,19 +46,13 @@
                     Height="30"
                      Name="TxtSearch"
                      TextChanged="TxtSearch_TextChanged"/>
-            
+
             <Button Name="BtnAdd"
                     Click="BtnAdd_Click"
                     Width="130"
                     Height="30"
                     Content="Добавить товар"
                     Margin="5" />
-            <Button Name="BtnClear"
-                    Click="BtnClear_Click"
-                    Width="130"
-                    Height="30"
-                    Content="Очистить"
-                    Margin="5"/>
             <StackPanel Orientation="Vertical"
                         VerticalAlignment="Center"
                         Height="80" Width="130">
@@ -127,8 +123,14 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Удалить"
+                                  Click="BtnDelete_Click"></MenuItem>
+                        <MenuItem Header="Копировать" Command="Copy"/>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
             </DataGrid>
-            
         </StackPanel>
     </Grid>
 </Window>
